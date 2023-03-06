@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Shop</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,17 +21,113 @@
                 <p>EL TIGRE</p>
                 <p>VENEZUELA COFFE BEANS</p>
             </div>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PRODUCTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
             <h1 class="page-title">HOME OF ORIGINAL TASTES</h1>
             <h2 class="page-subtitle">DISCOVER</h2>
             <i class="fa fa-arrow-circle-o-down"></i>
         </nav>
     </header>
 
+    <div class="pages">
+        <section id="home" active>
+          <div class="home-wrapper container"></div>
+        </section>
+        <section id="products">
+          <div class="product-wrapper container"></div>
+        </section>
+        <section id="contact">
+          <div class="contact-wrapper container"></div>
+        </section>
+      </div>
+
+    <footer class="footer">
+        <p>&copy; 2021 EL TIGRE inc.</p>
+    </footer>
+
+    <!-- Home -->
+
+    <script id="template-home" type="text/x-handlebars-template">
+        <div class="home container py-3">
+          <div class="row justify-content-around">
+            <div class="col-sm-6 col-lg-6">
+              <div class="card product-content">
+                <h3 class="product__name">{{ id }} {{ title }} </h3>
+                <p class="product__description">{{{ description }}}</p>
+                <div class="details">
+                  <p class="product__roasting">
+                    Roasting: <span class="score">{{{ roasting }}}</span>
+                  </p>
+                  <p class="product__intensity">
+                    Intensity: <span class="score">{{{ intensity }}}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-6">
+              <div class="card product-image">{{{ image }}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-us">
+            <h1>ABOUT US</h1>
+            <div class="container">
+                <p>Who are we? Just a bunch of friends with a love for a good coffe and desire to create something new,
+                    something orginal.</p>
+                <p>our coffees reflect us - young, wild and free. We are on the journey of new tastes...</p>
+                <p>Join us!</p>
+            </div>
+        </div>
+    </script>
+
+    <!-- Products -->
+
+    <script id="template-products" type="text/x-handlebars-template">
+        <div class="products container py-3">
+          <div class="row justify-content-around">
+            <div class="col-sm-6 col-lg-6">
+              <div class="card product-content">
+                <h3 class="product__name">{{ id }} {{ title }} </h3>
+                <p class="product__description">{{{ description }}}</p>
+                <div class="details">
+                  <p class="product__roasting">
+                    Roasting: <span class="score">{{{ roasting }}}</span>
+                  </p>
+                  <p class="product__intensity">
+                    Intensity: <span class="score">{{{ intensity }}}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-6">
+              <div class="card product-image">{{{ image }}}</div>
+            </div>
+          </div>
+        </div>
+    </script>
+
+
+    <!-- Contact -->
+
+    <script id="template-contact" type="text/x-handlebars-template">
+        <div class="contact">
+          <div class="page-title col-12">
+              <h1>CONTACT US</h1>
+          </div>
+          <div class="form col-12">
+              <label for="name">Name</label><br>
+              <input type="text" id="name" name="name"><br>
+              <label for="title">Title</label><br>
+              <input type="text" id="title" name="title"><br>
+              <label for="message">Message</label><br>
+              <input class="text-area" type="text" id="message" name="message"><br>
+              <button type="submit" value="submit">SUBMIT</button>
+          </div>
+      </div>
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/app.js" type="module"></script>
