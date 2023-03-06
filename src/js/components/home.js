@@ -2,11 +2,11 @@ import { select, templates } from '../settings.js';
 import utils from '../utils.js';
 
 class Home {
-    constructor(element) {
+  constructor(element) {
     const thisHome = this;
 
     thisHome.render(element);
-    thisHome.home = document.querySelectorAll(select.containerOf.home);
+    thisHome.home = document.querySelector(select.containerOf.home);
   }
 
   render(element) {

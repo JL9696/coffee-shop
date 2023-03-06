@@ -2,55 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,600;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navigation">
-            <div class="logo-header">
-                <p>EL TIGRE</p>
-                <p>VENEZUELA COFFE BEANS</p>
-            </div>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-            <h1 class="page-title">HOME OF ORIGINAL TASTES</h1>
-            <h2 class="page-subtitle">DISCOVER</h2>
-            <i class="fa fa-arrow-circle-o-down"></i>
-        </nav>
-    </header>
-
-    <div class="pages">
-        <section id="home" active>
-          <div class="home-wrapper container"></div>
-        </section>
-        <section id="products">
-          <div class="product-wrapper container"></div>
-        </section>
-        <section id="contact">
-          <div class="contact-wrapper container"></div>
-        </section>
+  <header>
+    <nav class="navigation">
+      <div class="logo-header">
+        <p>EL TIGRE</p>
+        <p>VENEZUELA COFFE BEANS</p>
       </div>
+      <div class="main-nav">
+        <a href="#home">HOME</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <h1 class="page-title">HOME OF ORIGINAL TASTES</h1>
+      <h2 class="page-subtitle">DISCOVER</h2>
+      <i class="fa fa-arrow-circle-o-down"></i>
+    </nav>
+  </header>
 
-    <footer class="footer">
-        <p>&copy; 2021 EL TIGRE inc.</p>
-    </footer>
+  <div class="pages">
+    <div id="home"></div>
+      <div class="home-wrapper container"></div>
+    </section>
+    <section id="products">
+      <div class="product-wrapper container"></div>
+    </section>
+    <section id="contact">
+      <div class="contact-wrapper container"></div>
+    </section>
+  </div>
 
-    <!-- Home -->
+  <footer class="footer">
+    <p>&copy; 2021 EL TIGRE inc.</p>
+  </footer>
 
-    <script id="template-home" type="text/x-handlebars-template">
+  <!-- Home -->
+
+  <script id="template-home" type="text/x-handlebars-template">
         <div class="home container py-3">
           <div class="row justify-content-around">
             <div class="col-sm-6 col-lg-6">
@@ -66,7 +66,6 @@
                   </p>
                 </div>
               </div>
-            </div>
             <div class="col-sm-6 col-lg-6">
               <div class="card product-image">{{{ image }}}</div>
             </div>
@@ -83,9 +82,9 @@
         </div>
     </script>
 
-    <!-- Products -->
+  <!-- Products -->
 
-    <script id="template-products" type="text/x-handlebars-template">
+  <script id="template-products" type="text/x-handlebars-template">
         <div class="products container py-3">
           <div class="row justify-content-around">
             <div class="col-sm-6 col-lg-6">
@@ -110,9 +109,9 @@
     </script>
 
 
-    <!-- Contact -->
+  <!-- Contact -->
 
-    <script id="template-contact" type="text/x-handlebars-template">
+  <script id="template-contact" type="text/x-handlebars-template">
         <div class="contact">
           <div class="page-title col-12">
               <h1>CONTACT US</h1>
@@ -129,8 +128,8 @@
       </div>
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-    <script src="js/app.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 
 </html>

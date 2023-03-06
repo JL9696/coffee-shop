@@ -2,22 +2,22 @@ import { select, templates } from '../settings.js';
 import utils from '../utils.js';
 
 class Contact {
-   /*  constructor(element) {
-        const thisHome = this;
+  constructor(element) {
+    const thisHome = this;
 
-        thisHome.render(element);
-        thisApp.home = document.querySelectorAll(select.containerOf.pages);
-    }
+    thisHome.render(element);
+    thisHome.home = document.querySelector(select.containerOf.home);
+  }
 
-    render(element) {
-        const thisHome = this;
+  render(element) {
+    const thisHome = this;
 
-        const generatedHTML = templates.home();
+    const generatedHTML = templates.home();
 
-        thisHome.element = utils.createDOMFromHTML(generatedHTML);
+    thisHome.element = utils.createDOMFromHTML(generatedHTML);
 
-        element.appendChild(thisHome.element).innerHTML;
-    }*/
+    element.appendChild(thisHome.element).innerHTML;
+  }
 }
 
 export default Contact;

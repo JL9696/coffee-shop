@@ -49,7 +49,7 @@ const app = {
       );
     }
   },
-
+  
   initHome: function () {
     const thisApp = this;
     const widgetContainer = document.querySelector(select.containerOf.home);
