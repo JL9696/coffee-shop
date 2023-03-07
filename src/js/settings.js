@@ -7,19 +7,22 @@ export const select = {
   containerOf: {
     productsWrapper: '.products-wrapper',
     pages: '.pages',
-    home: '#home',
-    products: '#products',
-    contact: '#contact',
+    home: '#home .container',
+    products: '#products .container',
+    contact: '#contact .container',
   },
   nav: {
-    links: '.header a',
+    links: '.main-nav a',
   },
 };
 
 export const classNames = {
   pages: {
     active: 'active',
-  }
+  },
+  nav: {
+    active: 'active',
+  },
 };
 
 export const settings = {

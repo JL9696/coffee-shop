@@ -1,5 +1,5 @@
 import { settings, select, classNames } from './settings.js';
-import Product from './components/products.js';
+import Products from './components/products.js';
 import Home from './components/home.js';
 import Contact from './components/contact.js';
 
@@ -12,7 +12,7 @@ const app = {
 
     const idFromHash = window.location.hash.replace('#/', '');
 
-    let pageMatchingHash = thisApp.pages.id;
+    let pageMatchingHash = thisApp.pages[0].id;
     for (let page of thisApp.pages) {
       if (page.id == idFromHash) {
         pageMatchingHash = page.id;
@@ -59,8 +59,7 @@ const app = {
   initProduct: function () {
     const thisApp = this;
 
-    const widgetContainer = document.querySelector(select.containerOf.products);   
-    thisApp.products = new Product(widgetContainer);
+    thisApp.products = new Products(thisApp.data.products);
   },
 
   initContact: function () {
@@ -88,7 +87,7 @@ const app = {
     const thisApp = this;
 
     thisApp.initPages();
-    thisApp.initProduct();
+    thisApp.initData();
     thisApp.initContact();
     thisApp.initHome();
   },

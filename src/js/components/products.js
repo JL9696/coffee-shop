@@ -1,30 +1,27 @@
 import { select, templates } from '../settings.js';
 import utils from '../utils.js';
 
-class Product {
-  constructor(element) {
+class Products {
+  constructor(data) {
     const thisProduct = this;
 
-    thisProduct.products = document.querySelector(select.containerOf.products);
-
-    thisProduct.render(element);
+    thisProduct.data = data;
+    thisProduct.render();
   }
 
   render() {
     const thisProduct = this;
 
-    const generatedHTML = templates.products();
-
-    thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+    const generatedHTML = templates.products({ products: thisProduct.data });
+    const generatedDOM = utils.createDOMFromHTML(generatedHTML);
 
     const productsWrapper = document.querySelectorAll(select.containerOf.productsWrapper);
-    
     for (let products of productsWrapper) {
-      const clone = thisProduct.element.cloneNode(true);
+      const clone = generatedDOM.cloneNode(true);
       products.appendChild(clone);
     }
   }
 
 }
 
-export default Product; 
+export default Products; 

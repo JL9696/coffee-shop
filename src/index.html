@@ -37,7 +37,7 @@
       <div class="home-wrapper container"></div>
     </section>
     <section id="products">
-      <div class="product-wrapper container"></div>
+      <div class="products-wrapper container"></div>
     </section>
     <section id="contact">
       <div class="contact-wrapper container"></div>
@@ -52,25 +52,7 @@
 
   <script id="template-home" type="text/x-handlebars-template">
         <div class="home container py-3">
-          <div class="row justify-content-around">
-            <div class="col-sm-6 col-lg-6">
-              <div class="card product-content">
-                <h3 class="product__name">{{ id }} {{ title }} </h3>
-                <p class="product__description">{{{ description }}}</p>
-                <div class="details">
-                  <p class="product__roasting">
-                    Roasting: <span class="score">{{{ roasting }}}</span>
-                  </p>
-                  <p class="product__intensity">
-                    Intensity: <span class="score">{{{ intensity }}}</span>
-                  </p>
-                </div>
-              </div>
-            <div class="col-sm-6 col-lg-6">
-              <div class="card product-image">{{{ image }}}</div>
-            </div>
-          </div>
-        </div>
+        <div class="products-wrapper"></div>
         <div class="about-us">
             <h1>ABOUT US</h1>
             <div class="container">
@@ -85,6 +67,8 @@
   <!-- Products -->
 
   <script id="template-products" type="text/x-handlebars-template">
+    <div>
+    {{#each products}}
         <div class="products container py-3">
           <div class="row justify-content-around">
             <div class="col-sm-6 col-lg-6">
@@ -106,6 +90,8 @@
             </div>
           </div>
         </div>
+    {{/each}}
+    </div>
     </script>
 
 
