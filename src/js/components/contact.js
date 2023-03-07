@@ -3,20 +3,20 @@ import utils from '../utils.js';
 
 class Contact {
   constructor(element) {
-    const thisHome = this;
+    const thisContact = this;
 
-    thisHome.render(element);
-    thisHome.home = document.querySelector(select.containerOf.home);
+    thisContact.render(element);
+    thisContact.Contact = document.querySelector(select.containerOf.contact);
   }
 
   render(element) {
-    const thisHome = this;
+    const thisContact = this;
 
-    const generatedHTML = templates.home();
+    const generatedHTML = templates.contact();
 
-    thisHome.element = utils.createDOMFromHTML(generatedHTML);
+    thisContact.element = utils.createDOMFromHTML(generatedHTML);
 
-    element.appendChild(thisHome.element).innerHTML;
+    element.appendChild(thisContact.element).innerHTML;
   }
 }
 

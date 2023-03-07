@@ -10,7 +10,7 @@ class Product {
     thisProduct.render(element);
   }
 
-  render(element) {
+  render() {
     const thisProduct = this;
 
     const generatedHTML = templates.products();
