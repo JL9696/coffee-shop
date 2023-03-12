@@ -11,12 +11,17 @@
 @import "./bootstrap/images";
 @import "./bootstrap/card";
 @import "./bootstrap/navbar";
-@import "./bootstrap/nav";
-@import "./bootstrap/card";
 
 // variables
 @import "./bootstrap/variables";
 
 // common styles
+@import "./settings";
 @import "./global";
-@import "./layout";
+@import "./icons";
+
+// patrials
+@import "./header";
+@import "./products";
+@import "./contact";
+@import "./about";
