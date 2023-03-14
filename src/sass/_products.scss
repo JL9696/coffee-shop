@@ -113,6 +113,7 @@
     
     }
   }
+  
 
   .product-content {
     height: 200px;
@@ -138,10 +139,9 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .home-wrapper.container {
     margin-top: 10px;
-
     .product-title {
       margin-top: 20px;
       line-height: 25px;
@@ -151,18 +151,13 @@
       text-transform: uppercase;
       letter-spacing: 10px;
     }
+  }
+    
     
     .product-title:after {
-      position: absolute;
-      content: "";
-      bottom: -20px;
       width: 350px;
-      height: 2px;
       transform: translateX(-78%);
-      background: #BEA67C;
-    
     }
-  }
 
   .product-content {
     height: 200px;
