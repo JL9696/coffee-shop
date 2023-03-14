@@ -10,12 +10,13 @@
   height: 400px;
   width: 250px;
   margin: auto;
-  
-  input, textarea {
+
+  input,
+  textarea {
     border: 2px solid black;
     line-height: 2;
   }
-  
+
   button[type="submit"] {
     background-color: $color-middle;
     color: $color-light;
@@ -27,4 +28,19 @@
     margin: 40px auto;
     border: none;
   }
+}
+
+@media (max-width: 575px) {
+  .contact {
+    height: 400px;
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .contact {
+    height: 400px;
+    margin-top: 100px;
+  }
+
 }

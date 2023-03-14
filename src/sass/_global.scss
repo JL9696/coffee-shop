@@ -22,9 +22,7 @@ body {
 }
   
 .container {
-  max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
   font-family: 'Source Sans Pro', sans-serif;
 }
   
@@ -59,3 +57,27 @@ body {
   margin: 15px 0;
 }
   
+// Media query
+
+@media (max-width: 575px) {
+  .title {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+  }
+    
+  .title:after {
+    width: 250px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .title {
+    font-size: 25px;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+  }
+    
+  .title:after {
+    width: 250px;
+  }
+}

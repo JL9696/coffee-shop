@@ -1,17 +1,34 @@
 header {
-  height: 550px;
-  background-image: url(../images/background.png);
-  background-size: cover;
+  height: 500px;
   padding: 20px;
+
 }
 
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  opacity: 0.9;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/background.png) no-repeat;
+  background-size: cover;
+}
+
+.fa {
+  font-size: 26px;
+  color: rgb(197, 188, 176);
+}
 
 .logo-header {
   color: $color-light;
   line-height: 5px;
-  display:inline-block;
+  display: inline-block;
   width: 30%;
   text-align: left;
+  margin-left: 20%;
 
 
   h2 {
@@ -30,11 +47,13 @@ header {
 }
 
 .main-nav {
+  position: relative;
   font-size: 12px;
   text-transform: uppercase;
-  display:inline-block;
-  width: 60%;
+  display: inline-block;
+  width: 40%;
   text-align: right;
+  top: -20px;
 
   a {
     margin: 10px;
@@ -44,26 +63,24 @@ header {
 }
 
 .page-title {
-  color: $color-middle;
-  line-height: 25px;
+  color: #BEA67C;
+  line-height: 50px;
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 20px;
 
-  h1 {
-    font-size: 60px;
-    font-weight: $font-bold;
-    text-transform: uppercase;
-    letter-spacing: 10px;
 
-    &.left {
-      margin-left: -150px;
-    }
+  &.left {
+    margin-left: -150px;
+  }
 
-    &.right {
-      margin-right: -100px;
-    }
+  &.right {
+    margin-right: -100px;
   }
 }
 
@@ -72,7 +89,7 @@ header {
   content: '';
   bottom: -20px;
   left: 50%;
-  width: 180px;
+  width: 200px;
   height: 4px;
   transform: translateX(-50%);
   background: $color-middle;
@@ -95,7 +112,88 @@ header {
     letter-spacing: 4px;
   }
 
-  i {
-    font-size: 26px;
+}
+
+// Media query
+
+@media (min-width: 576px) and (max-width: 768px) {
+  header {
+    height: 430px;
+  }
+
+  .page-title {
+    top: 23%;
+
+    h1 {
+      font-size: 20px;
+      letter-spacing: 5px;
+      margin-left: -120px;
+    }
+  }
+
+  .page-subtitle {
+    top: 43%;
+  }
+
+  .logo-header {
+    line-height: 15px;
+  }
+
+  .page-title:after {
+    left: 50%;
+    width: 80px;
+    height: 4px;
+  }
+  
+}
+
+@media (max-width: 575px) {
+  header {
+    height: 400px;
+  }
+
+  .page-title {
+    top: 23%;
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 25px;
+  }
+
+  .page-subtitle {
+    top: 38%;
+  }
+
+  .logo-header {
+    line-height: 15px;
+  }
+
+  .page-title:after {
+    left: 50%;
+    width: 80px;
+    height: 4px;
+  }
+
+  header::before {
+    height: 400px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px)  {
+  .page-title {
+    h1 {
+      font-size: 60px;
+      letter-spacing: 7px;
+      margin-left: -100px;
+    }
+  }
+
+  .logo-header {
+    line-height: 15px;
+  }
+
+  .page-title:after {
+    left: 50%;
+    width: 80px;
+    height: 4px;
   }
 }
