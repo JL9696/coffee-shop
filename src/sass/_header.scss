@@ -1,7 +1,7 @@
 header {
   height: 500px;
   padding: 20px;
-
+  position: relative;
 }
 
 header::before {
@@ -15,11 +15,6 @@ header::before {
   z-index: -1;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/background.png) no-repeat;
   background-size: cover;
-}
-
-.fa {
-  font-size: 26px;
-  color: rgb(197, 188, 176);
 }
 
 .logo-header {
@@ -63,23 +58,22 @@ header::before {
 }
 
 .page-title {
+  width: max-content;
   color: #BEA67C;
-  line-height: 50px;
-  position: absolute;
-  top: 25%;
-  left: 50%;
+  line-height: 30px;
+  margin-top: 13%;
+  margin-left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px;
+  font-size: 25px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 20px;
 
-
-  &.left {
+  .left {
     margin-left: -150px;
   }
 
-  &.right {
+  .right {
     margin-right: -100px;
   }
 }
@@ -98,14 +92,13 @@ header::before {
 .page-subtitle {
   color: #fff;
   line-height: 1;
-  font-weight: 200;
+  font-weight: 600;
   font-size: 20px;
   text-align: center;
-  position: absolute;
+  margin-left: 50%;
+  margin-top: 40px;
   letter-spacing: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 70%);
 
 
   h2 {
@@ -113,6 +106,11 @@ header::before {
     font-weight: $font-normal;
     text-transform: uppercase;
     letter-spacing: 4px;
+  }
+
+  i {
+    font-size: 23px;
+    color: white;
   }
 
 }
@@ -125,17 +123,15 @@ header::before {
   }
 
   .page-title {
-    top: 23%;
-
-    h1 {
-      font-size: 20px;
-      letter-spacing: 5px;
-      margin-left: -120px;
-    }
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-top: 160px;
   }
 
   .page-subtitle {
-    top: 43%;
+    font-weight: 100;
+    font-size: 10px;
+    margin-top: 50px;
   }
 
   .logo-header {
@@ -144,10 +140,10 @@ header::before {
 
   .page-title:after {
     left: 50%;
-    width: 80px;
+    width: 120px;
     height: 4px;
   }
-  
+
 }
 
 @media (max-width: 575px) {
@@ -157,13 +153,21 @@ header::before {
 
   .page-title {
     top: 23%;
-    font-size: 25px;
+    font-size: 16px;
     letter-spacing: 3px;
     line-height: 25px;
+
+    .left {
+      margin-left: -50px;
+    }
+  
+    .right {
+      margin-right: -50px;
+    }
   }
 
   .page-subtitle {
-    top: 38%;
+    margin-top: -30px;
   }
 
   .logo-header {
@@ -174,12 +178,12 @@ header::before {
   .main-nav {
     position: relative;
     font-size: 12px;
-    text-transform: uppercase;
     display: inline-block;
     text-align: right;
-    top: -50px;
+    top: -100px;
     width: auto;
-}
+    margin-left: 200px;
+  }
 
   .page-title:after {
     left: 50%;
@@ -192,10 +196,10 @@ header::before {
   }
 }
 
-@media (min-width: 576px) and (max-width: 768px)  {
+@media (min-width: 576px) and (max-width: 768px) {
   .page-title {
     h1 {
-      font-size: 60px;
+      font-size: 40px;
       letter-spacing: 7px;
       margin-left: -100px;
     }
@@ -213,7 +217,7 @@ header::before {
     display: inline-block;
     text-align: right;
     top: -50px;
-}
+  }
 
   .page-title:after {
     left: 50%;

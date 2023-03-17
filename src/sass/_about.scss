@@ -3,6 +3,9 @@
   padding-top: 20px;
   position: relative;
   margin: 0;
+  text-align: center;
+  justify-content: center;
+  display: flex;
 
   .container {
     position: relative;
@@ -14,6 +17,11 @@
 
     p {
       color: $color-light;
+      text-align: left;
+    }
+
+    p:nth-child(2){
+      margin-top: 40px;
     }
 
     #join{
@@ -24,6 +32,7 @@
   .about-title {
     color: $color-middle;
     line-height: 5px;
+    position: relative;
   }
 
   
@@ -56,7 +65,8 @@
 
 @media (max-width: 575px) {
   .about-us {
-    height: 350px;
+    height: 300px;
+    padding: 25px 20px;
 
     .container {
       font-size: 16px;
